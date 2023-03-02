@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block body %}
+<div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+   <div class="file btn btn-lg btn-default">       
+    <p>Upload a csv file with id and email without header</p>
+        Template <input class="form-control" type="file" name="template" ><br>
+        Send Mail <input class="form-control" type="file" name="formFile"><br>
+        <button type="submit" class="btn btn-success">Upload File</button>
+    </div><br><br>
+    </form>
+</div>
+{% endblock %}
