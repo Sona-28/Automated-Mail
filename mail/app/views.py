@@ -65,7 +65,7 @@ def upload(request):
 def Automated(request):
     # form_class = TempForm
     # def post(request):
-    # try:
+    try:
         if request.method == 'POST':
             print("Post")
             form = TempForm(request.POST, request.FILES)
@@ -97,9 +97,9 @@ def Automated(request):
             else:
                 print("Not valid")
         return render(request, 'automated.html')
-    # except:
-    #     print("Something is wrong")
-    #     return render(request, 'error.html')
+    except:
+        print("Something is wrong")
+        return render(request, 'error.html')
 
 class EmailAttachementView(View):
     form_class = AttForm
